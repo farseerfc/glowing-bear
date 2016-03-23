@@ -304,7 +304,10 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
                   <span class="cof-chat_time cob-chat_time coa-chat_time" ng-bind-html="::bufferline.formattedTime"></span>
                 </span>
               </td>
-              <td class="prefix"><a ng-click="addMention(bufferline.prefix)"><span class="hidden-bracket">&lt;</span><span ng-repeat="part in ::bufferline.prefix" ng-class="::part.classes" ng-bind="::part.text|prefixlimit:25"></span><span class="hidden-bracket">&gt;</span></a></td><!--
+              <td class="prefix"><a ng-click="addMention(bufferline.prefix)"><span class="hidden-bracket">&lt;</span><!--
+                      --><span ng-repeat="part in ::bufferline.prefix" ng-class="::part.classes" ng-bind="::part.text|prefixlimit:25"></span><span class="hidden-bracket">&gt;</span><!--
+                      --><img class="avatarimg" style="width: 48px;" ng-repeat="part in ::bufferline.prefix" ng-src="https://avatars.githubusercontent.com/{{part.text}}?v=3&s=48"/><!--
+                      --></a></td><!--
            --><td class="message"><!--
              --><div ng-repeat="metadata in ::bufferline.metadata" plugin data="::metadata"></div><!--
              --><span ng-repeat="part in ::bufferline.content" class="text" ng-class="::part.classes.concat(['line-' + part.$$hashKey.replace(':','_')])" ng-bind-html="::part.text | linky:'_blank' | DOMfilter:'irclinky' | DOMfilter:'emojify':settings.enableJSEmoji | DOMfilter:'inlinecolour' | DOMfilter:'latexmath':('.line-' + part.$$hashKey.replace(':','_')):settings.enableMathjax"></span>
