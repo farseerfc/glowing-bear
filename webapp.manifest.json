@@ -17,8 +17,8 @@
         "src": "assets/img/glowing_bear_128x128.png",
         "sizes": "128x128"
     }],
-    "scope": "/glowing-bear/",
-    "start_url": "/glowing-bear/index.html",
+    "scope": "/",
+    "start_url": "/index.html",
     "display": "standalone",
     "orientation": "portrait-primary",
     "theme_color": "#181818",
