@@ -27,14 +27,30 @@ a {
 
 td.prefix {
     text-align: right;
-    vertical-align: top;
+    vertical-align: middle;
     padding: 1px 5px 1px 1px;
     white-space: pre;
-    border-right: 1px solid #444;
+}
+td.prefix > a {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+td.prefix .avatarimg {
+  display: inline-block;
+  height: 28px;
+  width: 28px;
+  margin-left: 2px;
+  padding: 1px;
+  box-shadow: inset -2px 0px 15px currentColor,
+    0px 2px 10px currentColor;
+  background-color: transparent;
+  border-radius: 3px;
 }
 td.message {
     overflow: hidden;
-    vertical-align: top;
+    vertical-align: middle;
     width: 100%;
     padding: 1px 1px 1px 5px;
 
@@ -240,7 +256,6 @@ input[type=text], input[type=password], #sendMessage {
     right: 0;
     top: 0;
     padding-top: 39px;
-    padding-left: 5px;
     padding-bottom: 35px;
     z-index: 2;
 }
@@ -254,6 +269,7 @@ input[type=text], input[type=password], #sendMessage {
 }
 #nicklist a {
     text-decoration: none;
+    padding-left: 5px;
 }
 
 #connection-infos {
@@ -324,15 +340,15 @@ tr.bufferline {
 }
 
 td.time {
-    padding: 1px 5px 1px 1px;
-    vertical-align: top;
+    padding: 1px 5px;
+    vertical-align: middle;
 }
 
 .withnicklist {
     margin-right: 100px !important; /* nicklist */
 }
 .content[sidebar-state=visible] #bufferlines {
-    margin-left: 145px;    /* sidebar */
+    margin-left: 140px;    /* sidebar */
 }
 #bufferlines .btn {
     font-family: sans-serif;
@@ -803,7 +819,6 @@ img.emojione {
 
     #bufferlines td.time {
         display: inline-block;
-        padding-right: 3px;
         font-size: 0.8em;
     }
 

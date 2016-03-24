@@ -305,8 +305,8 @@ $ openssl req -nodes -newkey rsa:4096 -keyout relay.pem -x509 -days 365 -out rel
                 </span>
               </td>
               <td class="prefix"><a ng-click="addMention(bufferline.prefix)"><span class="hidden-bracket">&lt;</span><!--
-              --><span ng-repeat="part in ::bufferline.prefix" ng-class="::part.classes" ng-bind="::part.text|prefixlimit:25" style="display: inline-block; height: 30px; vertical-align: middle"></span><span class="hidden-bracket">&gt;</span><!--
-                      --><span class="avatarimg" ng-class="::part.classes" style="display: inline-block; height: 28px; width: 28px; margin-left: 2px; padding: 1px; background-image: url(https://avatars.githubusercontent.com/{{part.text}}?v=3&s=28);     box-shadow: inset -2px 0px 15px currentColor, 0px 2px 10px currentColor; background-color: transparent; border-radius: 3px;" ng-repeat="part in ::bufferline.prefix"></span><!--
+              --><span ng-repeat="part in ::bufferline.prefix" ng-class="::part.classes" ng-bind="::part.text|prefixlimit:25" style="height: 30px; line-height: 30px;"></span><span class="hidden-bracket">&gt;</span><!--
+              --><span class="avatarimg" ng-class="::part.classes" style="background-image: url(https://avatars.githubusercontent.com/{{part.text}}?v=3&s=28);" ng-repeat="part in ::bufferline.prefix"></span><!--
                       --></a></td><!--
            --><td class="message"><!--
              --><div ng-repeat="metadata in ::bufferline.metadata" plugin data="::metadata"></div><!--
